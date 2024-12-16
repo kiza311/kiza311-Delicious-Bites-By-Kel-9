@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Penjualan Makanan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Delicious Bites</div>
+        <nav>
+            <ul>
+                <li><a href="#" class="tab-link active" onclick="showTab('menu')">Menu</a></li>
+                <li><a href="#" class="tab-link" onclick="showTab('about')">Tentang Kami</a></li>
+                <li><a href="#" class="tab-link" onclick="showTab('contact')">Kontak</a></li>
+                <li><a href="#" class="tab-link" onclick="showTab('cart')">Keranjang</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Tab Contents -->
+    <section id="menu" class="tab-content active">
+        <h2>Menu Kami</h2>
+        <div class="menu-container">
+            <div class="menu-item">
+                <img src="chesebrgr.jpg" alt="Burger">
+                <h3>Cheesy Burger</h3>
+                <p>Patty daging sapi lezat dengan keju leleh dan sayuran segar.</p>
+                <button onclick="addToCart('Cheesy Burger', 100000)">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="pizza.jpg" alt="Pizza">
+                <h3>Pizza Margherita</h3>
+                <p>Pizza klasik dengan tomat segar, mozzarella, dan basil.</p>
+                <button onclick="addToCart('Pizza Margherita', 100000)">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="spagh.jpg" alt="Pasta">
+                <h3>Spaghetti Carbonara</h3>
+                <p>Pasta creamy dengan bacon dan parmesan.</p>
+                <button onclick="addToCart('Spaghetti Carbonara', 100000)">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="salad.jpg" alt="Salad">
+                <h3>Salad Caesar</h3>
+                <p>Sayuran segar dengan dressing Caesar dan crouton.</p>
+                <button onclick="addToCart('Salad Caesar', 80000)">Tambahkan ke Keranjang</button>
+            </div>
+            <div class="menu-item">
+                <img src="cakect.jpg" alt="Dessert">
+                <h3>chocolate cake</h3>
+                <p>Kue coklat kaya dan lembut dengan frosting krim.</p>
+                <button onclick="addToCart('chocolate cake', 60000)">Tambahkan ke Keranjang</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="tab-content">
+        <h2>Tentang Kami</h2>
+        <p>Delicious Bites adalah restoran yang berfokus pada penyediaan hidangan segar, lezat, dan berkualitas tinggi untuk memuaskan setiap selera. Kami memilih bahan-bahan terbaik dan mengutamakan kualitas dan pelayanan yang ramah, untuk memastikan pelanggan mendapatkan pengalaman yang tak terlupakan. Dari burger juicy hingga pizza klasik, setiap menu yang kami sajikan dibuat dengan cinta dan perhatian terhadap detail. Kami berkomitmen untuk memberikan kepuasan maksimal di setiap gigitan!</p>
+    </section>
+
+    <section id="contact" class="tab-content">
+        <h2>Kontak Kami</h2>
+        <p>Apakah Anda memiliki pertanyaan atau masukan? Kami sangat senang mendengarnya! Silakan hubungi kami:</p>
+        <ul>
+            <li>Email: contact@deliciousbites.com</li>
+            <li>Telepon: 021-456-7890</li>
+            <li>Alamat: Jalan Makanan No. 123, Kota Kuliner, Switzerland</li>
+        </ul>
+    </section>
+
+    <section id="cart" class="tab-content">
+        <h2>Keranjang Anda</h2>
+        <div id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div id="cart-total">
+            <p>Total: Rp <span id="total-amount">0.00</span></p>
+        </div>
+        <button onclick="checkout()">Checkout</button>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Delicious Bites. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script src="java.js"></script>
+</body>
+</html>
